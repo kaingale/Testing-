@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-26T17:07:47 IST" name="Default suite" finished-at="2025-06-26T17:08:20 IST" duration-ms="32581">
+  <suite started-at="2025-06-27T16:30:03 IST" name="Default suite" finished-at="2025-06-27T16:30:32 IST" duration-ms="29313">
     <groups>
     </groups>
-    <test started-at="2025-06-26T17:07:47 IST" name="Default test" finished-at="2025-06-26T17:08:20 IST" duration-ms="32581">
-      <class name="com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest@5552768b]" started-at="2025-06-26T17:07:47 IST" name="setUp" finished-at="2025-06-26T17:08:04 IST" duration-ms="16921" status="PASS">
+    <test started-at="2025-06-27T16:30:03 IST" name="Default test" finished-at="2025-06-27T16:30:32 IST" duration-ms="29313">
+      <class name="com.tests.scenario1.TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tests.scenario1.TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest@757d6814]" started-at="2025-06-27T16:30:03 IST" name="setUp" finished-at="2025-06-27T16:30:12 IST" duration-ms="9946" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAccRegWithMandatoryFieldsOnly()[pri:0, instance:com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest@5552768b]" started-at="2025-06-26T17:08:04 IST" name="verifyAccRegWithMandatoryFieldsOnly" finished-at="2025-06-26T17:08:19 IST" duration-ms="14787" status="PASS">
+        <test-method signature="verifyAccRegWithMandatoryFieldsOnly()[pri:0, instance:com.tests.scenario1.TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest@757d6814]" started-at="2025-06-27T16:30:12 IST" name="verifyAccRegWithMandatoryFieldsOnly" finished-at="2025-06-27T16:30:31 IST" duration-ms="18964" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAccRegWithMandatoryFieldsOnly -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest@5552768b]" started-at="2025-06-26T17:08:19 IST" name="tearDown" finished-at="2025-06-26T17:08:20 IST" duration-ms="786" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.scenario1.TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest@757d6814]" started-at="2025-06-27T16:30:31 IST" name="tearDown" finished-at="2025-06-27T16:30:32 IST" duration-ms="358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest -->
+      </class> <!-- com.tests.scenario1.TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

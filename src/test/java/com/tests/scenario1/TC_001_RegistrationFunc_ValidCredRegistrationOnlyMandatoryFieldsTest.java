@@ -3,7 +3,7 @@ package com.tests.scenario1;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.pageObjects.LandingPage;
+import com.pageObjects.HomePage;
 import com.pageObjects.MyAccountPage;
 import com.pageObjects.RegistrationPage;
 import com.tests.BaseTest;
@@ -12,11 +12,11 @@ public class TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTes
 	
 	@Test
 	public void verifyAccRegWithMandatoryFieldsOnly() {
-		
+		logger.info("== Starting TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest ==");
 		try {
 			//goto app url landing page and goto registration page
-			landingPage = new LandingPage(driver);
-			landingPage.clickOnCreateAccLnk();
+			homePage = new HomePage(driver);
+			homePage.clickOnCreateAccLnk();
 			
 			//enter form details and click on create account
 			registrationPage = new RegistrationPage(driver);
@@ -36,8 +36,9 @@ public class TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTes
 			Thread.sleep(5000);
 			
 		}catch(Exception e) {
-			System.out.println("Test failed due to an exception.."+e.getMessage());
+			logger.error("Test failed due to an exception in catch block: {}", e.getMessage());
 			Assert.fail();
 		}
+		logger.info("== Finished TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest ==");
 	}
 }

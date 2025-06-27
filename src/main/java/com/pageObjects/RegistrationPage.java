@@ -32,6 +32,9 @@ public class RegistrationPage extends BasePage {
 	WebElement confirmPwdInputBox;
 	@FindBy(xpath = "(//button[@id='send2'])[1]")
 	WebElement createAccBtn;
+	@FindBy(xpath = "//div[@role='alert']/div/div")
+	WebElement emailAlreadyExistErrorMsg;
+	
 	
 	//action methods
 	public void enterFname(String fname) {
@@ -56,5 +59,10 @@ public class RegistrationPage extends BasePage {
 	
 	public void clickOnCreateAccBtn() {
 		clickOnElement(createAccBtn);
+	}
+	
+	public Boolean isEmailExitErrorMsgDisplayed() {
+		waitForVisibility(confirmPwdInputBox);
+		return isWebElementVisible(emailAlreadyExistErrorMsg);
 	}
 }

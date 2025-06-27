@@ -1,1 +1,6 @@
-C:\Users\kaingale\Desktop\Assignments\src\main\java\com\pageObjects\LandingPage.java
+C:\Users\kaingale\Desktop\Assignments\src\main\java\com\pageObjects\BasePage.java
+C:\Users\kaingale\Desktop\Assignments\src\main\java\com\pageObjects\HomePage.java
+C:\Users\kaingale\Desktop\Assignments\src\main\java\com\pageObjects\LoginPage.java
+C:\Users\kaingale\Desktop\Assignments\src\main\java\com\pageObjects\MyAccountPage.java
+C:\Users\kaingale\Desktop\Assignments\src\main\java\com\pageObjects\RegistrationPage.java
+C:\Users\kaingale\Desktop\Assignments\src\main\java\utilities\RetryUtil.java

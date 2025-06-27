@@ -4,7 +4,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -13,7 +14,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 import com.github.javafaker.Faker;
-import com.pageObjects.LandingPage;
+import com.pageObjects.HomePage;
+import com.pageObjects.LoginPage;
 import com.pageObjects.MyAccountPage;
 import com.pageObjects.RegistrationPage;
 
@@ -21,9 +23,11 @@ public class BaseTest {
 	public static WebDriver driver;
 	public Properties prop;
 	
-	protected LandingPage landingPage;
+	protected HomePage homePage;
 	protected RegistrationPage registrationPage;
 	protected MyAccountPage myAccountPage;
+	protected LoginPage loginPage;
+	protected Logger logger;
 	
 	Faker faker = new Faker();
 	
@@ -47,11 +51,13 @@ public class BaseTest {
 					case "edge": driver = new EdgeDriver();break;
 					case "firefox": driver = new FirefoxDriver();break;
 					default : System.out.println("Invalid browser..");return;    //change with logger
-				}
+				}       
+				
+				//logger setup
+				logger = LogManager.getLogger(BaseTest.class);
 				
 				//delete cookies, add implicit wait, maximize the window
 				driver.manage().deleteAllCookies();
-//				driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 				driver.manage().window().maximize();
 				
 				//get app url form properties file and goto app
@@ -103,5 +109,8 @@ public class BaseTest {
 		return pwd;
 	}
 	
-	
+	//refresh method
+	protected void pageRefresh() {
+		driver.navigate().refresh();
+	}
 }
