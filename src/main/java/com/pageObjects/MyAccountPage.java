@@ -17,11 +17,18 @@ public class MyAccountPage extends BasePage {
 	
 	//locators
 	@FindBy(css = ".box-information p")
-	WebElement myAccPageHeaderEle;
+	private WebElement myAccPageHeaderEle;
+	
 	@FindBy(css = ".page-title span")
-	WebElement nameEmailTextEle;
+	private WebElement nameEmailTextEle;
+	
 	@FindBy(xpath = "//div[text()='Thank you for registering with Main Website Store.']")
-	WebElement accCreateSuccessMsgEle;
+	private WebElement accCreateSuccessMsgEle;
+
+	@FindBy(xpath = "//a[text()='My Orders']")
+	private WebElement myOrderListOpt;
+	
+	
 	
 	
 	//action methods
@@ -35,6 +42,7 @@ public class MyAccountPage extends BasePage {
 	}
 	
 	public boolean isAccCreatedSuccessMsgDisplayed() {
+		waitForVisibility(accCreateSuccessMsgEle);
 		return isWebElementVisible(accCreateSuccessMsgEle);
 	}
 }

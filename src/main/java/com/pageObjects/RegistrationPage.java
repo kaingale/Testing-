@@ -1,68 +1,73 @@
 package com.pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-/*
- * fname  inputbox : #firstname
- *  lname inptbox : #lastname
- *  email inpbox : #email_address
- *  pwd inpbox : #password
- *  cfm pwd inpbox : #password-confirmation
- *  creataccBtn : #send2
- */
 
 public class RegistrationPage extends BasePage {
-
+	
 	public RegistrationPage(WebDriver driver) {
 		super(driver);
 	}
 	
 	//locators
 	@FindBy(css = "#firstname")
-	WebElement fnameInputBox;
+	private WebElement fnameInputBox;
+	
 	@FindBy(css = "#lastname")
-	WebElement lnameInputBox;
+	private WebElement lnameInputBox;
+	
 	@FindBy(css = "#email_address")
-	WebElement emailInputBox;
+	private WebElement emailInputBox;
+	
 	@FindBy(css = "#password")
-	WebElement pwdInputBox;
+	private WebElement pwdInputBox;
+	
 	@FindBy(css = "#password-confirmation")
-	WebElement confirmPwdInputBox;
+	private WebElement confirmPwdInputBox;
+	
 	@FindBy(xpath = "(//button[@id='send2'])[1]")
-	WebElement createAccBtn;
+	private WebElement createAccBtn;
+
 	@FindBy(xpath = "//div[@role='alert']/div/div")
-	WebElement emailAlreadyExistErrorMsg;
+	private WebElement emailAlreadyExistErrorMsg;
 	
 	
 	//action methods
 	public void enterFname(String fname) {
+		waitForClicable(fnameInputBox);
 		fillInputBox(fnameInputBox, fname);
 	}
 	
 	public void enterLname(String lname) {
+		waitForClicable(lnameInputBox);
 		fillInputBox(lnameInputBox, lname);
 	}
 	
 	public void enterEmail(String email) {
+		waitForClicable(emailInputBox);
 		fillInputBox(emailInputBox, email);
 	}
 	
 	public void enterPassword(String pwd) {
+		scrollIntoViewElement(pwdInputBox);
+		waitForClicable(pwdInputBox);
 		fillInputBox(pwdInputBox, pwd);
 	}
 	
 	public void reEnterPwd(String pwd) {
+		waitForClicable(confirmPwdInputBox);
 		fillInputBox(confirmPwdInputBox, pwd);
 	}
 	
 	public void clickOnCreateAccBtn() {
+		waitForClicable(createAccBtn);
 		clickOnElement(createAccBtn);
 	}
 	
 	public Boolean isEmailExitErrorMsgDisplayed() {
-		waitForVisibility(confirmPwdInputBox);
-		return isWebElementVisible(emailAlreadyExistErrorMsg);
+		return isWebElementVisible(waitForVisibility(emailAlreadyExistErrorMsg));
 	}
 }

@@ -10,7 +10,7 @@ import com.tests.BaseTest;
 public class TC_02_LoginFunc_LoginUsingInValidCredsTest extends BaseTest {
 
 		@Test
-		public void verifyLoginUsingValidCreds() throws InterruptedException {
+		public void verifyLoginUsingInValidCreds() throws InterruptedException {
 			logger.info("== Starting TC_02_LoginFunc_LoginUsingInValidCredsTest ==");
 			try {
 				//navigate to landing page and click on sign in link
@@ -21,8 +21,9 @@ public class TC_02_LoginFunc_LoginUsingInValidCredsTest extends BaseTest {
 				//on login page fill all the details like email, pwd and click on sign in btn
 				logger.info("entering all the sign in details and click on sign in");
 				loginPage = new LoginPage(driver);
-				loginPage.enterEmail(prop.getProperty("userSignInEmailInvalid").trim());
-				loginPage.enterPassword(prop.getProperty("userSignInPwdInvalid").trim());
+				loginPage.enterEmail(emailGenerator1().trim());
+				String pwd = pwdGenerator().trim()+"@12345";
+				loginPage.enterPassword(pwd);
 				loginPage.clickOnSignInBtn();
 			
 				//validate welcome user text msg and logout

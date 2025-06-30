@@ -1,5 +1,6 @@
 package com.pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,13 +14,16 @@ public class LoginPage extends BasePage {
 	
 	//locators 
 	@FindBy(css = "#email")
-	WebElement emailInputBox;
+	private WebElement emailInputBox;
+	
 	@FindBy(xpath = "//fieldset[@class='fieldset login']//input[@id='pass']")
-	WebElement pwdInputBox;
+	private WebElement pwdInputBox;
+	
 	@FindBy(xpath = "//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]")
-	WebElement signInBtn;
-	@FindBy(xpath = "//div[@role='alert']/div/div")
-	WebElement signInIncorectErrorMsg;
+	private WebElement signInBtn;
+
+	@FindBy(css = "div[data-bind='html: $parent.prepareMessageForHtml(message.text)']") 
+	private WebElement signInIncorectErrorMsg;
 	
 	
 	//action methods
@@ -32,9 +36,9 @@ public class LoginPage extends BasePage {
 	}
 	
 	public void clickOnSignInBtn() {
+		waitForClicable(signInBtn);
 		clickOnElement(signInBtn);
 	}
-	
 	
 	public Boolean isSignInErrorMsgDisplayed() {
 		waitForVisibility(signInIncorectErrorMsg);

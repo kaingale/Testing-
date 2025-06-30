@@ -7,6 +7,7 @@ import com.pageObjects.HomePage;
 import com.pageObjects.MyAccountPage;
 import com.pageObjects.RegistrationPage;
 import com.tests.BaseTest;
+import com.tests.BaseTest2;
 
 public class TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest extends BaseTest{
 	
@@ -15,10 +16,12 @@ public class TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTes
 		logger.info("== Starting TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest ==");
 		try {
 			//goto app url landing page and goto registration page
+			logger.info("navigating to homepage and hitting create acc btn");
 			homePage = new HomePage(driver);
 			homePage.clickOnCreateAccLnk();
 			
 			//enter form details and click on create account
+			logger.info("filling registration form details");
 			registrationPage = new RegistrationPage(driver);
 			registrationPage.enterFname(fnameGenerator().trim());
 			registrationPage.enterLname(lnameGenerator().trim());
@@ -29,14 +32,17 @@ public class TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTes
 			registrationPage.reEnterPwd(pwd);
 			registrationPage.clickOnCreateAccBtn();
 						
-			//validate my acc page header, user name , user email
-			myAccountPage = new MyAccountPage(driver);
-			Assert.assertTrue(myAccountPage.isMyAccountHeaderDisplayed(),"Test failed: Expected my acc header not displayed..");
-			Assert.assertTrue(myAccountPage.isAccCreatedSuccessMsgDisplayed(),"Test failed: Expected Acc created success msg not displayed..");
-			Thread.sleep(5000);
+			//validate my acc page header, acc success msg
+			logger.info("validating header and acc created success msg");
+			MyAccountPage myAccountpage = new MyAccountPage(driver);
+			Assert.assertTrue(myAccountpage.isMyAccountHeaderDisplayed(),"Test failed: Expected my acc header not displayed..");
+			Assert.assertTrue(myAccountpage.isAccCreatedSuccessMsgDisplayed(),"Test failed: Expected Acc created success msg not displayed..");
 			
+			logger.info("test method completed");
+
 		}catch(Exception e) {
 			logger.error("Test failed due to an exception in catch block: {}", e.getMessage());
+			logger.debug(e);
 			Assert.fail();
 		}
 		logger.info("== Finished TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest ==");

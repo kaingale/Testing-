@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -15,12 +16,10 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utilities.RetryUtil;
 
 public class BasePage {
 	protected WebDriver driver;
 	protected WebDriverWait webDriverWait;
-	protected RetryUtil retryUtil;
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
@@ -29,6 +28,8 @@ public class BasePage {
 		PageFactory.initElements(new AjaxElementLocatorFactory(driver, 15), this);
 	}
 
+	
+	
 	// utility action methods
 	protected void clickOnElement(WebElement ele) {
 		ele.click();
@@ -48,15 +49,12 @@ public class BasePage {
 		return ele.isDisplayed();
 	}
 
-	// utility wait methods
+	
+	
+	// ALL WAIT METHODS
 	// wait till element is visible - takes webelement
 	protected WebElement waitForVisibility(WebElement ele) {
 		return webDriverWait.until(ExpectedConditions.visibilityOf(ele));
-	}
-
-	// wait till element is visible - takes locator
-	protected WebElement waitForVisibilityLocator(By locator) {
-		return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 
 	// wait till element is clickable
@@ -64,14 +62,33 @@ public class BasePage {
 		return webDriverWait.until(ExpectedConditions.elementToBeClickable(ele));
 	}
 
-	//wait till element is clickable -  locator
-	protected WebElement waitForClickableLocator(By locator) {
-		return webDriverWait.until(ExpectedConditions.elementToBeClickable(locator));
-	}
 
 	// wait till element text is visible - webelement
 	protected Boolean waitForTextToBePresent(WebElement ele, String givenText) {
 		return webDriverWait.until(ExpectedConditions.textToBePresentInElement(ele, givenText));
+	}
+
+	
+	
+	
+	// wait till element is visible - takes locator
+	protected WebElement waitForVisibilityLocator(By locator) {
+		return webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	
+	//wait till element invisible
+	protected boolean waitForInVisiblityOfLocator(By locator) {
+		return webDriverWait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+	}
+
+	//wait till element is present in the dom
+	protected WebElement waitForClic(By locator) {
+		return webDriverWait.until(ExpectedConditions.presenceOfElementLocated(locator));
+	}
+
+	//wait till element is clickable -  locator
+	protected WebElement waitForClickableLocator(By locator) {
+		return webDriverWait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
 	// wait till element text is visible - locator
@@ -79,7 +96,9 @@ public class BasePage {
 		return webDriverWait.until(ExpectedConditions.textToBePresentInElementLocated(locator, txt));
 	}
 
-	// FluentWait method for any condition
+	
+	
+	// FLUENTWAIT method for any condition
 	protected <T> T fluentWait(Function<WebDriver, T> condition, int timeoutSeconds, int pollingMillis) {
 		Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(timeoutSeconds))
 				.pollingEvery(Duration.ofMillis(pollingMillis)).ignoring(NoSuchElementException.class);
@@ -87,7 +106,7 @@ public class BasePage {
 		return wait.until(condition);
 	}
 
-	// Wait for element to be visible using FluentWait
+	// Wait for element to be visible using FluentWait - webelement
 	protected WebElement waitForElementVisibleFluent(WebElement element, int timeoutSeconds, int pollingMillis) {
 		return fluentWait(drv -> {
 			if (element.isDisplayed()) {
@@ -98,13 +117,13 @@ public class BasePage {
 		}, timeoutSeconds, pollingMillis);
 	}
 
-	// Wait for text to be present using FluentWait
+	// Wait for text to be present using FluentWait - element
 	protected boolean waitForTextToBePresentFluent(WebElement element, String text, int timeoutSeconds,
 			int pollingMillis) {
 		return fluentWait(drv -> element.getText().contains(text), timeoutSeconds, pollingMillis);
 	}
 
-	// fluentwait using locator
+	// fluentwait using - locator
 	public boolean waitForTextToBePresentFluent(By locator, String text, int timeoutSeconds, int pollingMillis) {
 		Wait<WebDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(timeoutSeconds))
 				.pollingEvery(Duration.ofMillis(pollingMillis)).ignoring(StaleElementReferenceException.class)
@@ -114,5 +133,12 @@ public class BasePage {
 			WebElement element = driver.findElement(locator);
 			return element.getText().contains(text);
 		});
+	}
+	
+	
+	//java script executer
+	public void scrollIntoViewElement(WebElement element) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
 	}
 }

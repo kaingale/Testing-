@@ -15,10 +15,12 @@ public class TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryField
 		logger.info("== Starting TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest ==");
 		try {
 			//goto app url landing page and goto registration page
+			logger.info("navigating homepage hitting create acc btn");
 			homePage = new HomePage(driver);
 			homePage.clickOnCreateAccLnk();
 			
 			//enter form details and click on create account
+			logger.info("filling registration form details with duplicate email");
 			registrationPage = new RegistrationPage(driver);
 			registrationPage.enterFname(fnameGenerator().trim());
 			registrationPage.enterLname(lnameGenerator().trim());
@@ -29,9 +31,12 @@ public class TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryField
 			registrationPage.reEnterPwd(pwd);
 			registrationPage.clickOnCreateAccBtn();
 						
-			//validate my acc page header, user name , user email
+			//validate duplicate email error msg
+			logger.info("validating duplicate email err msg");
 			Assert.assertTrue(registrationPage.isEmailExitErrorMsgDisplayed(), "Test failed! email already exist error not displayed..");
 			
+			logger.info("test method completed");
+
 		}catch(Exception e) {
 			logger.error("Test failed due to an exception in catch block: {}", e.getMessage());
 			Assert.fail();
