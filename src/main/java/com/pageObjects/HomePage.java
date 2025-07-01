@@ -25,7 +25,8 @@ public class HomePage extends BasePage {
 	@FindBy(css = "div.header li.greet span")
 	private WebElement welcomeUserTxtEle;
 	
-	@FindBy(css = "div.header li.customer-welcome span.customer-name")
+//	@FindBy(css = "div.header li.customer-welcome span.customer-name")
+	@FindBy(css = "span[aria-expanded='false'] .switch")
 	private WebElement drpdownArrowEle;
 	
 	@FindBy(css = "div.header div.customer-menu li.authorization-link")
@@ -40,10 +41,26 @@ public class HomePage extends BasePage {
 	@FindBy(css = "ol.products li")
 	private List<WebElement> searchProductList;
 
-	@FindBy(css = "ul.header a#idcrzwKQlH")
-	private List<WebElement> myAccDrpDwnOpt;
+	@FindBy(xpath = "//div[contains(@class,'customer-menu')][@aria-hidden='false']//a[contains(text(),'My Account')]")
+	private WebElement myAccDrpDwnOpt;
 	
+	@FindBy(xpath = "//nav[@class='navigation']/ul/li[1]/a")
+	WebElement whatNewSectionLnk;
+	
+	@FindBy(xpath = "//div[@class='categories-menu']/ul[2]//a[contains(text(),'Hoodies & Sweatshirts')]")
+	private WebElement hoddiesLnkInMensSectionList;
+	
+	@FindBy(xpath = "//div[text()='Size']/following-sibling::div//a/div")
+	private List<WebElement> chooseSizeFilter;
 
+	@FindBy(xpath = "//div[text()='Size']")
+	private WebElement sizeFilterEle;
+
+	@FindBy(xpath = "//div[text()='Price']")
+	private WebElement priceFilterEle;
+
+	@FindBy(xpath = "//div[text()='Color']")
+	private WebElement colorFilterEle;
 	
 	
 	//action methods
@@ -130,4 +147,61 @@ public class HomePage extends BasePage {
 		}
 	}
 
+	public void clickOnMyaccDrpDwnOpt() {
+		waitForVisibility(myAccDrpDwnOpt);
+		clickOnElement(myAccDrpDwnOpt);
+	}
+	
+	public void clickOnWhatNewLnk() {
+		clickOnElement(whatNewSectionLnk);
+	}
+	
+	public void gotoMensSectionHoodies() {
+		waitForVisibility(hoddiesLnkInMensSectionList);
+		scrollIntoViewElement(hoddiesLnkInMensSectionList);
+		clickOnElement(hoddiesLnkInMensSectionList);
+	}
+	
+	public void opensSizeFilterOptions() {
+		clickOnElement(sizeFilterEle);
+	}
+	
+	public void chooseSizeFromFilter(String givenSize) {
+		for(WebElement size : chooseSizeFilter) {
+			String sizeOpt = size.getText();
+			if(sizeOpt.equalsIgnoreCase(givenSize)) {
+//				WebElement sizeLnkDiv = size.findElement(By.xpath("/div"));
+//				sizeLnkDiv.click();
+				jseClickElement(size);
+			}
+		}
+	}
+	
+	public void chooseSizeFromFilterDirect(String givenSize) {
+		WebElement sizeOpt = waitForClickableLocator(By.xpath("//div[text()='Size']/following-sibling::div//a/div[text()='"+givenSize+"']"));
+		sizeOpt.click();
+	}
+	
+	public void openPriceFilterOptions() {
+		waitForClicable(priceFilterEle);
+		scrollIntoViewElement(priceFilterEle);
+		clickOnElement(priceFilterEle);
+	}
+	
+	public void choosePriceFromFilterDirect(String givenPriceRange) {
+		WebElement priceOpt = waitForClickableLocator(By.xpath("//div[text()='Price']/following-sibling::div//span[text()='"+givenPriceRange+"']/parent::a"));
+		priceOpt.click();
+	}
+	
+	public void openColorFilterOptions() {
+		waitForClicable(colorFilterEle);
+		scrollIntoViewElement(colorFilterEle);
+		colorFilterEle.click();
+	}
+	
+	
+	public void chooseColorFromFilterDirect(String givenColor) {
+		WebElement colorOpt = waitForClickableLocator(By.xpath("//div[@id='narrow-by-list']//div[@data-option-label='"+givenColor+"']"));
+		colorOpt.click();
+	}
 }

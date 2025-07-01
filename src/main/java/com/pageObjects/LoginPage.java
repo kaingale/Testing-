@@ -1,5 +1,7 @@
 package com.pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,6 +24,9 @@ public class LoginPage extends BasePage {
 	@FindBy(xpath = "//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]")
 	private WebElement signInBtn;
 
+	@FindBy(xpath = "//div[contains(text(),'You saved the account information.')]")
+	private WebElement accDetailsUpdateSuccessMsg;
+
 	@FindBy(css = "div[data-bind='html: $parent.prepareMessageForHtml(message.text)']") 
 	private WebElement signInIncorectErrorMsg;
 	
@@ -40,8 +45,13 @@ public class LoginPage extends BasePage {
 		clickOnElement(signInBtn);
 	}
 	
-	public Boolean isSignInErrorMsgDisplayed() {
+	public boolean isSignInErrorMsgDisplayed() {
 		waitForVisibility(signInIncorectErrorMsg);
 		return isWebElementVisible(signInIncorectErrorMsg);
+	}
+	
+	public boolean isAccUpdateSuccessMsgDisplayed() {
+		waitForVisibility(accDetailsUpdateSuccessMsg);
+		return isWebElementVisible(accDetailsUpdateSuccessMsg);
 	}
 }

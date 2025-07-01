@@ -18,15 +18,15 @@ public class TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest extends BaseTest
 		try {
 			//navigate to landing page and click on sign in link
 			logger.info("navigating to login page");
-			HomePage homePage = new HomePage(driver);
+			homePage = new HomePage(driver);
 			homePage.clickOnSignInLnk();
 			
 			//on login page fill all the details like email, pwd and click on sign in btn
 			logger.info("entering all the sign in details and click on sign in");
-			LoginPage loginpage = new LoginPage(driver);
-			loginpage.enterEmail(prop.getProperty("demoUserEmail").trim());
-			loginpage.enterPassword(prop.getProperty("demoUserPwd").trim());
-			loginpage.clickOnSignInBtn();
+			loginPage = new LoginPage(driver);
+			loginPage.enterEmail(prop.getProperty("demoUserEmail").trim());
+			loginPage.enterPassword(prop.getProperty("demoUserPwd").trim());
+			loginPage.clickOnSignInBtn();
 			Thread.sleep(3000);
 		
 			//search product -> search product -> goto product details

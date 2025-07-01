@@ -27,6 +27,7 @@ import com.pageObjects.CheckoutPage;
 import com.pageObjects.HomePage;
 import com.pageObjects.LoginPage;
 import com.pageObjects.MyAccountPage;
+import com.pageObjects.OrderHistoryPage;
 import com.pageObjects.ProductDetailsPage;
 import com.pageObjects.RegistrationPage;
 
@@ -41,6 +42,7 @@ public class BaseTest {
 	protected ProductDetailsPage productPage;
 	protected CartPage cartPage;
 	protected CheckoutPage checkoutPage;
+	protected OrderHistoryPage orderHistoryPage;
 	protected Logger logger;
 	
 	Faker faker = new Faker();
