@@ -3,18 +3,22 @@
 <suite name="MasterSuite" thread-count="2" >
 	<listeners>
 		<listener class-name="com.utilities.ExtentReportManager" />
-		<listener class-name="com.utilities.RetryListener"/>
+		<!-- <listener class-name="com.utilities.RetryListener"/> -->
 	</listeners>	
   	<test  name="Test">
   		<parameter name="os" value="Windows"/>
   		<parameter name="browser" value="chrome"/>
     	<classes>
-	     <!--  <class name="com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest"/>
-	      <class name="com.tests.scenario1.TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest"/> 
-	      <class name="com.tests.scenario2.TC_01_LoginFunc_LoginUsingValidCredsTest"/>
-	      <class name="com.tests.scenario2.TC_02_LoginFunc_LoginUsingInValidCredsTest"/> -->
+	      <!-- <class name="com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest"/>
+	      <class name="com.tests.scenario1.TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest"/>
+	      <class name="com.tests.scenario2.TC_01_LoginFunc_LoginUsingValidCredsTest"/>  
+	      <class name="com.tests.scenario2.TC_02_LoginFunc_LoginUsingInValidCredsTest"/>
 	      <class name="com.tests.scenario3.TC_01_ProdSearchFunc_ProductSearchValidationTest"/> 
-	      
+	      <class name="com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest"/> -->
+	      <class name="com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest"/> 
+	      <!-- <class name="com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest"/> 
+	      <class name="com.tests.scenario12.TC_01_OrderHistoryFunc_ValidateOrderHistoryDetailsTest"/> 
+	      <class name="com.tests.scenario11.TC_01_AccUpdateFunc_ValidateAccountDetailsUpdationTest"/> --> 
     	</classes>
   	</test> <!-- Test -->
 </suite> <!-- Suite -->

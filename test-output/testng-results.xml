@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-01T16:53:44 IST" name="Default suite" finished-at="2025-07-01T16:54:45 IST" duration-ms="61584">
+  <suite started-at="2025-07-05T12:55:16 IST" name="MasterSuite" finished-at="2025-07-05T12:56:00 IST" duration-ms="44061">
     <groups>
     </groups>
-    <test started-at="2025-07-01T16:53:44 IST" name="Default test" finished-at="2025-07-01T16:54:45 IST" duration-ms="61584">
-      <class name="com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest@bff34c6]" started-at="2025-07-01T16:53:44 IST" name="setUp" finished-at="2025-07-01T16:53:54 IST" duration-ms="10803" status="PASS">
+    <test started-at="2025-07-05T12:55:16 IST" name="Test" finished-at="2025-07-05T12:56:00 IST" duration-ms="44061">
+      <class name="com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest@1c3146bc]" started-at="2025-07-05T12:55:16 IST" name="setUp" finished-at="2025-07-05T12:55:29 IST" duration-ms="13627" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,15 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyAdvancedFiltering()[pri:0, instance:com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest@bff34c6]" started-at="2025-07-01T16:53:54 IST" name="verifyAdvancedFiltering" finished-at="2025-07-01T16:54:45 IST" duration-ms="50214" status="PASS">
+        <test-method signature="verifyAddToCartFunctionalityTest()[pri:0, instance:com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest@1c3146bc]" started-at="2025-07-05T12:55:29 IST" name="verifyAddToCartFunctionalityTest" finished-at="2025-07-05T12:56:00 IST" duration-ms="30075" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAdvancedFiltering -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest@bff34c6]" started-at="2025-07-01T16:54:45 IST" name="tearDown" finished-at="2025-07-01T16:54:45 IST" duration-ms="518" status="PASS">
+        </test-method> <!-- verifyAddToCartFunctionalityTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest@1c3146bc]" started-at="2025-07-05T12:56:00 IST" name="tearDown" finished-at="2025-07-05T12:56:00 IST" duration-ms="302" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest -->
+    </test> <!-- Test -->
+  </suite> <!-- MasterSuite -->
 </testng-results>

@@ -78,9 +78,9 @@ public class TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet extends BaseT
 			loginPage = new LoginPage(driver);
 			loginPage.enterEmail(email);
 			loginPage.enterPassword(password);
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 			loginPage.clickOnSignInBtn();
-			Thread.sleep(3000);
+			Thread.sleep(2000);
 		
 			//validate welcome user text msg and logout
 			logger.info("validating DDT datasets");
@@ -93,7 +93,7 @@ public class TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet extends BaseT
 			}
 			if (status.equalsIgnoreCase("Invalid")) {
 				logger.info("validating DDT email: {}", email);
-				Thread.sleep(3000);
+				Thread.sleep(2000);
 				Assert.assertTrue(loginPage.isSignInErrorMsgDisplayed(),"Test failed! no error msg displayed..");
 				Thread.sleep(6000);
 			}

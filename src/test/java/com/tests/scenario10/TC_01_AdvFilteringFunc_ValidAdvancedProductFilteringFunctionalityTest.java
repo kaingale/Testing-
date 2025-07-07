@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.pageObjects.HomePage;
 import com.tests.BaseTest;
+import com.utilities.ActionLogger;
 
 public class TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest extends BaseTest {
 
@@ -12,28 +13,21 @@ public class TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTe
 	public void verifyAdvancedFiltering() {
 		logger.info("== Starting TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest ==");
 		try {
+			ActionLogger actionLogger = actionLoggerCreationHelper();
 			//homepage -> whats new section -> hoodies 
 			logger.info("navigating to site and product category");
-			homePage = new HomePage(driver);
+			homePage = new HomePage(driver, actionLogger);
 			homePage.clickOnWhatNewLnk();
 			homePage.gotoMensSectionHoodies();
-			Thread.sleep(3000);
 			homePage.opensSizeFilterOptions();
-			Thread.sleep(2000);
 			homePage.chooseSizeFromFilterDirect(prop.getProperty("productSize").trim());
-			Thread.sleep(3000);
 			homePage.openPriceFilterOptions();
-			Thread.sleep(2000);
 			homePage.choosePriceFromFilterDirect(prop.getProperty("priceForFiltering").trim());
-			Thread.sleep(3000);
 			homePage.openColorFilterOptions();
-			Thread.sleep(2000);
 			homePage.chooseColorFromFilterDirect(prop.getProperty("productColor").trim());
-			Thread.sleep(3000);
 						
 			//validate the result
 			Assert.assertTrue(homePage.isSearchProductInList(prop.getProperty("advFilterProdName").trim(), prop.getProperty("advFilterProdPrice").trim()),"Test failed! no correct product found..");
-			Thread.sleep(10000);
 				
 			logger.info("test method completed");	
 			

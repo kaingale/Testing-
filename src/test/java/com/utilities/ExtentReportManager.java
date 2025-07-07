@@ -4,7 +4,6 @@ import java.awt.Desktop;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;

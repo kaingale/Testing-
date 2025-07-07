@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.pageObjects.HomePage;
 import com.tests.BaseTest;
+import com.utilities.ActionLogger;
 
 public class TC_01_ProdSearchFunc_ProductSearchValidationTest extends BaseTest {
 	
@@ -12,9 +13,10 @@ public class TC_01_ProdSearchFunc_ProductSearchValidationTest extends BaseTest {
 	public void verifyProductSearchFunctionalityTest() {
 		logger.info("== Starting TC_01_ProdSearchFunc_ProductSearchValidationTest ==");
 		try {
+			ActionLogger actionLogger =  actionLoggerCreationHelper();
 			//goto homepage enter prod in search bar hit search
 			logger.info("navigating to site and searching product");
-			homePage = new HomePage(driver);
+			homePage = new HomePage(driver, actionLogger);
 			homePage.enterProductInSearchBox(prop.getProperty("searchProductName"));
 			homePage.clickSearchBtn();
 			

@@ -7,6 +7,7 @@ import com.pageObjects.HomePage;
 import com.pageObjects.MyAccountPage;
 import com.pageObjects.RegistrationPage;
 import com.tests.BaseTest;
+import com.utilities.ActionLogger;
 
 public class TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryFieldsTest extends BaseTest{
 	
@@ -14,14 +15,15 @@ public class TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryField
 	public void verifyAccRegWithMandatoryFieldsOnly() {
 		logger.info("== Starting TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest ==");
 		try {
+			ActionLogger actionLogger = actionLoggerCreationHelper();
 			//goto app url landing page and goto registration page
 			logger.info("navigating homepage hitting create acc btn");
-			homePage = new HomePage(driver);
+			homePage = new HomePage(driver, actionLogger);
 			homePage.clickOnCreateAccLnk();
 			
 			//enter form details and click on create account
 			logger.info("filling registration form details with duplicate email");
-			registrationPage = new RegistrationPage(driver);
+			registrationPage = new RegistrationPage(driver, actionLogger);
 			registrationPage.enterFname(fnameGenerator().trim());
 			registrationPage.enterLname(lnameGenerator().trim());
 			registrationPage.enterEmail(prop.getProperty("userSignInEmail").trim());
@@ -29,6 +31,7 @@ public class TC_002_RegistrationFunc_DuplicateCredRegistrationOnlyMandatoryField
 			String pwd = pwdGenerator().trim()+"@12345";
 			registrationPage.enterPassword(pwd);
 			registrationPage.reEnterPwd(pwd);
+			Thread.sleep(1000);
 			registrationPage.clickOnCreateAccBtn();
 						
 			//validate duplicate email error msg

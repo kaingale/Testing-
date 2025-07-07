@@ -16,11 +16,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.github.javafaker.Faker;
 import com.pageObjects.CartPage;
 import com.pageObjects.CheckoutPage;
@@ -30,6 +32,7 @@ import com.pageObjects.MyAccountPage;
 import com.pageObjects.OrderHistoryPage;
 import com.pageObjects.ProductDetailsPage;
 import com.pageObjects.RegistrationPage;
+import com.utilities.*;
 
 public class BaseTest {
 	protected WebDriver driver;
@@ -44,6 +47,7 @@ public class BaseTest {
 	protected CheckoutPage checkoutPage;
 	protected OrderHistoryPage orderHistoryPage;
 	protected Logger logger;
+	protected ScenarioContextForSavingDynamicValues scenarioContext;
 	
 	Faker faker = new Faker();
 	
@@ -169,5 +173,11 @@ public class BaseTest {
 	        System.out.println("Failed to capture screenshot: " + e.getMessage());
 	        return null;
 	    }
+	}
+	
+	
+	protected ActionLogger actionLoggerCreationHelper() {
+		ExtentTest extentTest = (ExtentTest) Reporter.getCurrentTestResult().getAttribute("extentTest");
+        return new ActionLogger(driver, extentTest);
 	}
 }
