@@ -29,19 +29,20 @@ public class WebDriverOptionsSetup {
 //        options.addArguments("--disable-extensions");
 //        options.addArguments("user-data-dir=/tmp/temporary-profile");
         if (System.getenv("CI") != null) {
+        	options.addArguments("--incognito");
         	options.addArguments("--window-size=1920,1080");
-//            options.addArguments("--headless=new");
+            options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
         }
-        try {
-        	Path tempDir = Files.createTempDirectory("chrome-user-data");
-            String userDataDir = tempDir.toAbsolutePath().toString();
-            options.addArguments("--user-data-dir=" + userDataDir);
-            System.out.println("Using user data dir: " + userDataDir);
-        } catch (IOException e) {
-            System.out.println("Failed to create temp user data dir: " + e.getMessage());
-        }
+//        try {
+//        	Path tempDir = Files.createTempDirectory("chrome-user-data");
+//            String userDataDir = tempDir.toAbsolutePath().toString();
+//            options.addArguments("--user-data-dir=" + userDataDir);
+//            System.out.println("Using user data dir: " + userDataDir);
+//        } catch (IOException e) {
+//            System.out.println("Failed to create temp user data dir: " + e.getMessage());
+//        }
         
         return options;
     }
