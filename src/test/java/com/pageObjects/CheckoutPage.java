@@ -92,6 +92,7 @@ public class CheckoutPage extends BasePage{
 	
 
 	public boolean isOrderSummeryDetailsCorrect(String givenQuantity, String givenColor, String givenSize) {
+		waitForInVisiblityOfLocator(By.className("loading-mask"));
 		waitForVisibility(orderQuantityInSummary);
 		if(orderQuantityInSummary.getText().contains(givenQuantity)) {
 			if(waitForInVisiblityOfLocator(By.id("checkout-loader")));
