@@ -2,6 +2,8 @@
 name: Automation project ci using gitActions
 
 on:
+  push:
+    branches: [ main, feature/branch-demo ]
   pull_request:
     branches: [ main ]
 
