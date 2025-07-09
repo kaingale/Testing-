@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test-Edge-3</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jun 28 23:11:24 IST 2025</td>
+<td>Started on:</td><td>Tue Jul 01 21:27:30 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>73 seconds (73770 ms)</td>
+<tr><td>Total time:</td><td>102 seconds (102053 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,10 +76,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.tests.scenario2.TC_01_LoginFunc_LoginUsingValidCredsTest.verifyLoginUsingValidCreds()'><b>verifyLoginUsingValidCreds</b><br>Test class: com.tests.scenario2.TC_01_LoginFunc_LoginUsingValidCredsTest</td>
-<td></td>
-<td>7</td>
-<td>com.tests.scenario2.TC_01_LoginFunc_LoginUsingValidCredsTest@59252cb6</td></tr>
+<td title='com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest.verifyAccRegWithMandatoryFieldsOnly()'><b>verifyAccRegWithMandatoryFieldsOnly</b><br>Test class: com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest</td>
+<td><div><pre>java.lang.AssertionError: null
+	at com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest.verifyAccRegWithMandatoryFieldsOnly(TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace947522291", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace947522291'><pre>java.lang.AssertionError: null
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.fail(Assert.java:116)
+	at com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest.verifyAccRegWithMandatoryFieldsOnly(TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div></td>
+<td>87</td>
+<td>com.tests.scenario1.TC_001_RegistrationFunc_ValidCredRegistrationOnlyMandatoryFieldsTest@17a87e37</td></tr>
 </table><p>
 </body>
 </html>

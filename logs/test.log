@@ -1,44 +1,9 @@
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 5 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 10 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\kaingale\AppData\Local\Temp\testng-eclipse-217717114\testng-customsuite.xml
+2025-07-09 16:22:33 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\kaingale\Desktop\Assignments\demo-runner.xml
 
-2025-07-01 16:53:44 [main] INFO  org.testng.internal.Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 3 ms.
-2025-07-01 16:53:54 [main] INFO  com.tests.BaseTest - == Starting TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest ==
-2025-07-01 16:53:54 [main] INFO  com.tests.BaseTest - navigating to site and product category
-2025-07-01 16:54:45 [main] INFO  com.tests.BaseTest - test method completed
-2025-07-01 16:54:45 [main] INFO  com.tests.BaseTest - == Finished TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest ==
-2025-07-01 16:54:45 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.jq.Main@64b7225f: 118 ms
-2025-07-01 16:54:45 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.FailedReporter@31e04b13: 1 ms
-2025-07-01 16:54:45 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.XMLReporter@552ed807: 11 ms
-2025-07-01 16:54:45 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@537c8c7e: 8 ms
-2025-07-01 16:54:45 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@4bafe935: 9 ms
-2025-07-01 16:54:45 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@87b5b49: 0 ms
+2025-07-09 16:22:34 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-07-09 16:22:34 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\kaingale\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-07-09 16:22:42 [main] INFO  com.tests.BaseTest - == Starting TC_01_CartFunc_ValidateAddToCartFunctionalityTest ==
+2025-07-09 16:22:42 [main] INFO  com.tests.BaseTest - navigating to site and searching product
+2025-07-09 16:23:16 [main] INFO  com.tests.BaseTest - test method completed
+2025-07-09 16:23:16 [main] INFO  com.tests.BaseTest - == Finished TC_01_CartFunc_ValidateAddToCartFunctionalityTest ==

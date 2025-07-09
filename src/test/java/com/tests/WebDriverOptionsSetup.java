@@ -4,6 +4,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,16 +17,32 @@ public class WebDriverOptionsSetup {
 
 //      Disable Chrome's "Save password" prompt and notifications
         Map<String, Object> prefs = new HashMap<String, Object>();
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
-        prefs.put("profile.default_content_setting_values.notifications", 2);
+//        prefs.put("credentials_enable_service", false);
+//        prefs.put("profile.password_manager_enabled", false);
+//        prefs.put("profile.default_content_setting_values.notifications", 2);
 
 //        options.setExperimentalOption("prefs", prefs);
 //        options.addArguments("--disable-notifications");
 //        options.addArguments("--disable-popup-blocking");
         options.addArguments("--incognito");
+//        options.addArguments("--headless=new");
 //        options.addArguments("--disable-extensions");
 //        options.addArguments("user-data-dir=/tmp/temporary-profile");
+        if (System.getenv("CI") != null) {
+        	options.addArguments("--incognito");
+        	options.addArguments("--window-size=1920,1080");
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+        }
+//        try {
+//        	Path tempDir = Files.createTempDirectory("chrome-user-data");
+//            String userDataDir = tempDir.toAbsolutePath().toString();
+//            options.addArguments("--user-data-dir=" + userDataDir);
+//            System.out.println("Using user data dir: " + userDataDir);
+//        } catch (IOException e) {
+//            System.out.println("Failed to create temp user data dir: " + e.getMessage());
+//        }
         
         return options;
     }
@@ -33,9 +52,9 @@ public class WebDriverOptionsSetup {
         EdgeOptions options = new EdgeOptions();
 
         Map<String, Object> prefs = new HashMap<>();
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
-        prefs.put("profile.default_content_setting_values.notifications", 2);
+//        prefs.put("credentials_enable_service", false);
+//        prefs.put("profile.password_manager_enabled", false);
+//        prefs.put("profile.default_content_setting_values.notifications", 2);
 
 //        options.setExperimentalOption("prefs", prefs);
 //        options.addArguments("--disable-notifications");

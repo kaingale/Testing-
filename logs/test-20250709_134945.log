@@ -1,0 +1,74 @@
+2025-07-09 13:49:46 [main] WARN  io.github.bonigarcia.wdm.WebDriverManager - Exception deleting driver cache at C:\Users\kaingale\.cache\selenium
+org.apache.commons.io.IOExceptionList: 1 exception(s): [org.apache.commons.io.IOIndexedException: IOException #0: Cannot delete file: C:\Users\kaingale\.cache\selenium\chromedriver]
+	at org.apache.commons.io.IOExceptionList.checkEmpty(IOExceptionList.java:50)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:357)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:42)
+	at org.apache.commons.io.function.IOStreams.forAll(IOStreams.java:36)
+	at org.apache.commons.io.function.IOConsumer.forAll(IOConsumer.java:80)
+	at org.apache.commons.io.FileUtils.cleanDirectory(FileUtils.java:381)
+	at io.github.bonigarcia.wdm.WebDriverManager.clearDriverCache(WebDriverManager.java:835)
+	at com.tests.BaseTest.setUp(BaseTest.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.apache.commons.io.IOIndexedException: IOException #0: Cannot delete file: C:\Users\kaingale\.cache\selenium\chromedriver
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:352)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:343)
+	... 34 more
+Caused by: java.io.IOException: Cannot delete file: C:\Users\kaingale\.cache\selenium\chromedriver
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1428)
+	at org.apache.commons.io.FileUtils.lambda$cleanDirectory$0(FileUtils.java:381)
+	at org.apache.commons.io.function.IOStream.lambda$forAll$11(IOStream.java:345)
+	... 37 more
+Caused by: java.nio.file.AccessDeniedException: C:\Users\kaingale\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:89)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.apache.commons.io.file.DeletingPathVisitor.visitFile(DeletingPathVisitor.java:159)
+	at org.apache.commons.io.file.DeletingPathVisitor.visitFile(DeletingPathVisitor.java:37)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2786)
+	at java.base/java.nio.file.Files.walkFileTree(Files.java:2857)
+	at org.apache.commons.io.file.PathUtils.visitFileTree(PathUtils.java:1730)
+	at org.apache.commons.io.file.PathUtils.deleteDirectory(PathUtils.java:518)
+	at org.apache.commons.io.file.PathUtils.delete(PathUtils.java:477)
+	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1421)
+	... 39 more
+2025-07-09 13:49:48 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-07-09 13:49:48 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\kaingale\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-07-09 13:49:59 [main] INFO  com.tests.BaseTest - == Starting TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==
+2025-07-09 13:49:59 [main] INFO  com.tests.BaseTest - navigating to login page
+2025-07-09 13:50:02 [main] INFO  com.tests.BaseTest - entering all the sign in details and click on sign in
+2025-07-09 13:50:06 [main] INFO  com.tests.BaseTest - searching product, goto product details
+2025-07-09 13:50:16 [main] INFO  com.tests.BaseTest - entering product details, adding to cart
+2025-07-09 13:50:33 [main] INFO  com.tests.BaseTest - going checkout, entering shipping details, goto payements
+2025-07-09 13:51:54 [main] ERROR com.tests.BaseTest - Test failed due to an exception in catch block: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.cssSelector: div.details-qty span.value' (tried for 20 second(s) with 500 milliseconds interval)

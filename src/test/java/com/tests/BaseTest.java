@@ -16,11 +16,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.aventstack.extentreports.ExtentTest;
 import com.github.javafaker.Faker;
 import com.pageObjects.CartPage;
 import com.pageObjects.CheckoutPage;
@@ -30,6 +32,9 @@ import com.pageObjects.MyAccountPage;
 import com.pageObjects.OrderHistoryPage;
 import com.pageObjects.ProductDetailsPage;
 import com.pageObjects.RegistrationPage;
+import com.utilities.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
 	protected WebDriver driver;
@@ -44,6 +49,7 @@ public class BaseTest {
 	protected CheckoutPage checkoutPage;
 	protected OrderHistoryPage orderHistoryPage;
 	protected Logger logger;
+	protected ScenarioContextForSavingDynamicValues scenarioContext;
 	
 	Faker faker = new Faker();
 	
@@ -68,7 +74,8 @@ public class BaseTest {
 				
 				switch(browser.trim().toLowerCase()) {
 					case "chrome":
-//						WebDriverManager.chromedriver().setup();
+//						WebDriverManager.chromedriver().clearDriverCache();
+						WebDriverManager.chromedriver().setup();
 						driver = new ChromeDriver(optionSetup.initChromeOptions());
 						break;
 					case "edge":
@@ -161,7 +168,7 @@ public class BaseTest {
 	        String currentDateTimeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	        TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
 	        File sourceFile = takeScreenshot.getScreenshotAs(OutputType.FILE);
-	        String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\" + tname + "_" + currentDateTimeStamp + ".png";
+	        String targetFilePath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + tname + "_" + currentDateTimeStamp + ".png";
 	        File targetFile = new File(targetFilePath);
 	        sourceFile.renameTo(targetFile);
 	        return targetFilePath;
@@ -169,5 +176,11 @@ public class BaseTest {
 	        System.out.println("Failed to capture screenshot: " + e.getMessage());
 	        return null;
 	    }
+	}
+	
+	
+	protected ActionLogger actionLoggerCreationHelper() {
+		ExtentTest extentTest = (ExtentTest) Reporter.getCurrentTestResult().getAttribute("extentTest");
+        return new ActionLogger(driver, extentTest);
 	}
 }

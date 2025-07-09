@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest">
+      <class name="com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest">
         <methods>
           <include name="tearDown"/>
+          <include name="verifyCheckoutFunctionlity"/>
           <include name="setUp"/>
-          <include name="verifyAdvancedFiltering"/>
         </methods>
-      </class> <!-- com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest -->
+      </class> <!-- com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
