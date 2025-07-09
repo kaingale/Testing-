@@ -145,6 +145,7 @@
 &lt;suite thread-count=&quot;2&quot; name=&quot;MasterSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.utilities.ExtentReportManager&quot;/&gt;
+    &lt;listener class-name=&quot;com.utilities.RetryListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;parameter name=&quot;os&quot; value=&quot;Windows&quot;/&gt;
@@ -194,7 +195,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyCheckoutFunctionlity')
 data.setCell(0, 2, 'com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest')
-data.setCell(0, 3, 72402);
+data.setCell(0, 3, 83038);
 window.suiteTableData['MasterSuite']= { tableData: data, tableDiv: 'times-div-MasterSuite'}
 return data;
 }
@@ -232,11 +233,11 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyCheckoutFunctionlity</span>
-                <span class="method-start">10557 ms</span>
+                <span class="method-start">11222 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">82961 ms</span>
+                <span class="method-start">94260 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

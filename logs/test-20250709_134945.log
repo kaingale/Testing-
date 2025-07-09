@@ -1,4 +1,4 @@
-2025-07-09 13:53:03 [main] WARN  io.github.bonigarcia.wdm.WebDriverManager - Exception deleting driver cache at C:\Users\kaingale\.cache\selenium
+2025-07-09 13:49:46 [main] WARN  io.github.bonigarcia.wdm.WebDriverManager - Exception deleting driver cache at C:\Users\kaingale\.cache\selenium
 org.apache.commons.io.IOExceptionList: 1 exception(s): [org.apache.commons.io.IOIndexedException: IOException #0: Cannot delete file: C:\Users\kaingale\.cache\selenium\chromedriver]
 	at org.apache.commons.io.IOExceptionList.checkEmpty(IOExceptionList.java:50)
 	at org.apache.commons.io.function.IOStream.forAll(IOStream.java:357)
@@ -63,13 +63,12 @@ Caused by: java.nio.file.AccessDeniedException: C:\Users\kaingale\.cache\seleniu
 	at org.apache.commons.io.file.PathUtils.delete(PathUtils.java:477)
 	at org.apache.commons.io.FileUtils.forceDelete(FileUtils.java:1421)
 	... 39 more
-2025-07-09 13:53:05 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
-2025-07-09 13:53:05 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\kaingale\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
-2025-07-09 13:53:14 [main] INFO  com.tests.BaseTest - == Starting TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==
-2025-07-09 13:53:14 [main] INFO  com.tests.BaseTest - navigating to login page
-2025-07-09 13:53:15 [main] INFO  com.tests.BaseTest - entering all the sign in details and click on sign in
-2025-07-09 13:53:20 [main] INFO  com.tests.BaseTest - searching product, goto product details
-2025-07-09 13:53:28 [main] INFO  com.tests.BaseTest - entering product details, adding to cart
-2025-07-09 13:54:07 [main] INFO  com.tests.BaseTest - going checkout, entering shipping details, goto payements
-2025-07-09 13:54:37 [main] INFO  com.tests.BaseTest - test method completed
-2025-07-09 13:54:37 [main] INFO  com.tests.BaseTest - == Finished TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==
+2025-07-09 13:49:48 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 137.0.7151.119 (resolved driver for Chrome 137)
+2025-07-09 13:49:48 [main] INFO  io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\kaingale\.cache\selenium\chromedriver\win64\137.0.7151.119\chromedriver.exe
+2025-07-09 13:49:59 [main] INFO  com.tests.BaseTest - == Starting TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==
+2025-07-09 13:49:59 [main] INFO  com.tests.BaseTest - navigating to login page
+2025-07-09 13:50:02 [main] INFO  com.tests.BaseTest - entering all the sign in details and click on sign in
+2025-07-09 13:50:06 [main] INFO  com.tests.BaseTest - searching product, goto product details
+2025-07-09 13:50:16 [main] INFO  com.tests.BaseTest - entering product details, adding to cart
+2025-07-09 13:50:33 [main] INFO  com.tests.BaseTest - going checkout, entering shipping details, goto payements
+2025-07-09 13:51:54 [main] ERROR com.tests.BaseTest - Test failed due to an exception in catch block: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator 'By.cssSelector: div.details-qty span.value' (tried for 20 second(s) with 500 milliseconds interval)

@@ -2,6 +2,7 @@ package com.utilities;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriverException;
@@ -44,7 +45,8 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 
         if (cause instanceof TimeoutException
                 || cause instanceof WebDriverException
-                || cause instanceof StaleElementReferenceException // <-- Add this line
+                || cause instanceof StaleElementReferenceException 
+                || cause instanceof NoSuchElementException
                 || message.contains("stale element reference")
                 || message.contains("timeout")
                 || message.contains("connection reset")

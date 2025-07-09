@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-09T11:57:24 IST" name="MasterSuite" finished-at="2025-07-09T11:58:48 IST" duration-ms="83321">
+  <suite started-at="2025-07-09T13:53:03 IST" name="MasterSuite" finished-at="2025-07-09T13:54:37 IST" duration-ms="94667">
     <groups>
     </groups>
-    <test started-at="2025-07-09T11:57:24 IST" name="Test" finished-at="2025-07-09T11:58:48 IST" duration-ms="83321">
+    <test started-at="2025-07-09T13:53:03 IST" name="Test" finished-at="2025-07-09T13:54:37 IST" duration-ms="94667">
       <class name="com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest">
-        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest@2ceb80a1]" started-at="2025-07-09T11:57:24 IST" name="setUp" finished-at="2025-07-09T11:57:35 IST" duration-ms="10542" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String,java.lang.String)[pri:0, instance:com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest@2b0f373b]" started-at="2025-07-09T13:53:03 IST" name="setUp" finished-at="2025-07-09T13:53:14 IST" duration-ms="11206" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCheckoutFunctionlity()[pri:0, instance:com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest@2ceb80a1]" started-at="2025-07-09T11:57:35 IST" name="verifyCheckoutFunctionlity" finished-at="2025-07-09T11:58:47 IST" duration-ms="72402" status="PASS">
+        <test-method signature="verifyCheckoutFunctionlity()[pri:0, instance:com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest@2b0f373b]" started-at="2025-07-09T13:53:14 IST" name="verifyCheckoutFunctionlity" finished-at="2025-07-09T13:54:37 IST" duration-ms="83038" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyCheckoutFunctionlity -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest@2ceb80a1]" started-at="2025-07-09T11:58:47 IST" name="tearDown" finished-at="2025-07-09T11:58:48 IST" duration-ms="336" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest@2b0f373b]" started-at="2025-07-09T13:54:37 IST" name="tearDown" finished-at="2025-07-09T13:54:37 IST" duration-ms="384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

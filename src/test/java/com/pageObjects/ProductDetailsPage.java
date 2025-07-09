@@ -41,7 +41,7 @@ public class ProductDetailsPage extends BasePage {
 	@FindBy(css = "#qty")
 	private WebElement quantityInputBox;
 
-	@FindBy(id = "product-addtocart-button")
+	@FindBy(css = "#product-addtocart-button")
 	private WebElement addToCartBtn;
 
 	@FindBy(css = "a.showcart")
@@ -85,7 +85,8 @@ public class ProductDetailsPage extends BasePage {
 	}
 
 	public void chooseColorForProduct(String givenColor) {
-		waitForInVisiblityOfLocator(By.cssSelector("div.modals-overlay"));
+//		waitForInVisiblityOfLocator(By.cssSelector("div.modals-overlay"));
+		waitForInVisiblityOfLocator(By.className("loading-mask"));
 		for(WebElement colorEle : colorList) {
 			scrollIntoViewElement(colorEle);
 			if(colorEle.getAttribute("aria-label").contains(givenColor)) {
@@ -105,10 +106,12 @@ public class ProductDetailsPage extends BasePage {
 	public void clickAddToCart() {
 		waitForClicable(addToCartBtn);
 		clickOnElement(addToCartBtn);
+//		waitForVisibilityLocator(By.xpath("//button[@id='product-addtocart-button']/span[@text()='Added']"));
 		waitForInVisiblityOfLocator(By.className("loading-mask"));
 	}
 	
 	public void openShowCartPopup() {
+		waitForClicable(showcartLnk);
 		clickOnElement(showcartLnk);
 		actionLogger.logStep("Clicked on show cart module");
 	}

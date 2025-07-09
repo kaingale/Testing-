@@ -1,5 +1,0 @@
-2025-07-09 11:43:37 [main] INFO  com.tests.BaseTest - == Starting TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==
-2025-07-09 11:43:37 [main] INFO  com.tests.BaseTest - navigating to login page
-2025-07-09 11:43:38 [main] INFO  com.tests.BaseTest - entering all the sign in details and click on sign in
-2025-07-09 11:43:42 [main] INFO  com.tests.BaseTest - searching product, goto product details
-2025-07-09 11:43:49 [main] ERROR com.tests.BaseTest - Test failed due to an exception in catch block: Cannot invoke "com.utilities.ScenarioContextForSavingDynamicValues.setContext(String, Object)" because "this.scenarioContext" is null

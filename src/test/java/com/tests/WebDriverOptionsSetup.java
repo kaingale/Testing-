@@ -25,11 +25,12 @@ public class WebDriverOptionsSetup {
 //        options.addArguments("--disable-notifications");
 //        options.addArguments("--disable-popup-blocking");
         options.addArguments("--incognito");
+//        options.addArguments("--headless=new");
 //        options.addArguments("--disable-extensions");
 //        options.addArguments("user-data-dir=/tmp/temporary-profile");
         if (System.getenv("CI") != null) {
         	options.addArguments("--window-size=1920,1080");
-            options.addArguments("--headless=new");
+//            options.addArguments("--headless=new");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
         }

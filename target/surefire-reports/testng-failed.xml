@@ -3,6 +3,7 @@
 <suite thread-count="2" name="Failed suite [MasterSuite]" guice-stage="DEVELOPMENT" verbose="0">
   <listeners>
     <listener class-name="com.utilities.ExtentReportManager"/>
+    <listener class-name="com.utilities.RetryListener"/>
   </listeners>
   <test thread-count="2" name="Test(failed)" verbose="0">
     <parameter name="os" value="Windows"/>
