@@ -85,6 +85,7 @@ public class ProductDetailsPage extends BasePage {
 	}
 
 	public void chooseColorForProduct(String givenColor) {
+		waitForInVisiblityOfLocator(By.cssSelector("div.modals-overlay"));
 		for(WebElement colorEle : colorList) {
 			scrollIntoViewElement(colorEle);
 			if(colorEle.getAttribute("aria-label").contains(givenColor)) {

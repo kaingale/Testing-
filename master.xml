@@ -3,7 +3,7 @@
 <suite name="MasterSuite" thread-count="2" >
 	<listeners>
 		<listener class-name="com.utilities.ExtentReportManager" />
-		<!-- <listener class-name="com.utilities.RetryListener"/> -->
+		<listener class-name="com.utilities.RetryListener"/>
 	</listeners>	
   	<test  name="Test">
   		<parameter name="os" value="Windows"/>
