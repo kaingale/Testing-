@@ -4,6 +4,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,9 +16,9 @@ public class WebDriverOptionsSetup {
 
 //      Disable Chrome's "Save password" prompt and notifications
         Map<String, Object> prefs = new HashMap<String, Object>();
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
-        prefs.put("profile.default_content_setting_values.notifications", 2);
+//        prefs.put("credentials_enable_service", false);
+//        prefs.put("profile.password_manager_enabled", false);
+//        prefs.put("profile.default_content_setting_values.notifications", 2);
 
 //        options.setExperimentalOption("prefs", prefs);
 //        options.addArguments("--disable-notifications");
@@ -24,6 +26,17 @@ public class WebDriverOptionsSetup {
         options.addArguments("--incognito");
 //        options.addArguments("--disable-extensions");
 //        options.addArguments("user-data-dir=/tmp/temporary-profile");
+        if (System.getenv("CI") != null) {
+            options.addArguments("--headless=new");
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+        }
+        try {
+            String tempDir = java.nio.file.Files.createTempDirectory("chrome-user-data").toString();
+            options.addArguments("--user-data-dir=" + tempDir);
+        } catch (IOException e) {
+            System.out.println("Failed to create temp user data dir: " + e.getMessage());
+        }
         
         return options;
     }
@@ -33,9 +46,9 @@ public class WebDriverOptionsSetup {
         EdgeOptions options = new EdgeOptions();
 
         Map<String, Object> prefs = new HashMap<>();
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
-        prefs.put("profile.default_content_setting_values.notifications", 2);
+//        prefs.put("credentials_enable_service", false);
+//        prefs.put("profile.password_manager_enabled", false);
+//        prefs.put("profile.default_content_setting_values.notifications", 2);
 
 //        options.setExperimentalOption("prefs", prefs);
 //        options.addArguments("--disable-notifications");

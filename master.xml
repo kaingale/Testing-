@@ -14,11 +14,11 @@
 	      <class name="com.tests.scenario2.TC_01_LoginFunc_LoginUsingValidCredsTest"/>  
 	      <class name="com.tests.scenario2.TC_02_LoginFunc_LoginUsingInValidCredsTest"/>
 	      <class name="com.tests.scenario3.TC_01_ProdSearchFunc_ProductSearchValidationTest"/> 
-	      <class name="com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest"/> -->
+	      <class name="com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest"/>  -->
 	      <class name="com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest"/> 
-	      <!-- <class name="com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest"/> 
+	    <!--   <class name="com.tests.scenario10.TC_01_AdvFilteringFunc_ValidAdvancedProductFilteringFunctionalityTest"/> 
 	      <class name="com.tests.scenario12.TC_01_OrderHistoryFunc_ValidateOrderHistoryDetailsTest"/> 
-	      <class name="com.tests.scenario11.TC_01_AccUpdateFunc_ValidateAccountDetailsUpdationTest"/> --> 
+	      <class name="com.tests.scenario11.TC_01_AccUpdateFunc_ValidateAccountDetailsUpdationTest"/>  -->
     	</classes>
   	</test> <!-- Test -->
 </suite> <!-- Suite -->

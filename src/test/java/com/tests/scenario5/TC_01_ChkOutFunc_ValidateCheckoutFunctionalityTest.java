@@ -21,7 +21,7 @@ public class TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest extends BaseTest
 			scenarioContext =  new ScenarioContextForSavingDynamicValues();
 			//navigate to landing page and click on sign in link
 			logger.info("navigating to login page");
-			homePage = new HomePage(driver, actionLogger);
+			homePage = new HomePage(driver, actionLogger,scenarioContext);
 			homePage.clickOnSignInLnk();
 			
 			//on login page fill all the details like email, pwd and click on sign in btn

@@ -34,6 +34,8 @@ import com.pageObjects.ProductDetailsPage;
 import com.pageObjects.RegistrationPage;
 import com.utilities.*;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BaseTest {
 	protected WebDriver driver;
 	protected Properties prop;
@@ -72,7 +74,8 @@ public class BaseTest {
 				
 				switch(browser.trim().toLowerCase()) {
 					case "chrome":
-//						WebDriverManager.chromedriver().setup();
+						WebDriverManager.chromedriver().clearDriverCache();
+						WebDriverManager.chromedriver().setup();
 						driver = new ChromeDriver(optionSetup.initChromeOptions());
 						break;
 					case "edge":
@@ -165,7 +168,7 @@ public class BaseTest {
 	        String currentDateTimeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	        TakesScreenshot takeScreenshot = (TakesScreenshot) driver;
 	        File sourceFile = takeScreenshot.getScreenshotAs(OutputType.FILE);
-	        String targetFilePath = System.getProperty("user.dir") + "\\screenshots\\" + tname + "_" + currentDateTimeStamp + ".png";
+	        String targetFilePath = System.getProperty("user.dir") + File.separator + "screenshots" + File.separator + tname + "_" + currentDateTimeStamp + ".png";
 	        File targetFile = new File(targetFilePath);
 	        sourceFile.renameTo(targetFile);
 	        return targetFilePath;

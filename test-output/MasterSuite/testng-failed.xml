@@ -8,13 +8,13 @@
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.tests.scenario11.TC_01_AccUpdateFunc_ValidateAccountDetailsUpdationTest">
+      <class name="com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest">
         <methods>
           <include name="tearDown"/>
+          <include name="verifyCheckoutFunctionlity"/>
           <include name="setUp"/>
-          <include name="verifyAccUpdateFunctionality"/>
         </methods>
-      </class> <!-- com.tests.scenario11.TC_01_AccUpdateFunc_ValidateAccountDetailsUpdationTest -->
+      </class> <!-- com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [MasterSuite] -->

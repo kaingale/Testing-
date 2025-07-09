@@ -1,0 +1,7 @@
+2025-07-05 12:55:16 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\kaingale\Desktop\Assignments\master.xml
+
+2025-07-05 12:55:30 [main] INFO  com.tests.BaseTest - == Starting TC_01_CartFunc_ValidateAddToCartFunctionalityTest ==
+2025-07-05 12:55:30 [main] INFO  com.tests.BaseTest - navigating to site and searching product
+2025-07-05 12:56:00 [main] INFO  com.tests.BaseTest - test method completed
+2025-07-05 12:56:00 [main] INFO  com.tests.BaseTest - == Finished TC_01_CartFunc_ValidateAddToCartFunctionalityTest ==

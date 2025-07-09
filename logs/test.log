@@ -1,7 +1,8 @@
-2025-07-05 12:55:16 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\kaingale\Desktop\Assignments\master.xml
-
-2025-07-05 12:55:30 [main] INFO  com.tests.BaseTest - == Starting TC_01_CartFunc_ValidateAddToCartFunctionalityTest ==
-2025-07-05 12:55:30 [main] INFO  com.tests.BaseTest - navigating to site and searching product
-2025-07-05 12:56:00 [main] INFO  com.tests.BaseTest - test method completed
-2025-07-05 12:56:00 [main] INFO  com.tests.BaseTest - == Finished TC_01_CartFunc_ValidateAddToCartFunctionalityTest ==
+2025-07-09 11:57:35 [main] INFO  com.tests.BaseTest - == Starting TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==
+2025-07-09 11:57:35 [main] INFO  com.tests.BaseTest - navigating to login page
+2025-07-09 11:57:37 [main] INFO  com.tests.BaseTest - entering all the sign in details and click on sign in
+2025-07-09 11:57:41 [main] INFO  com.tests.BaseTest - searching product, goto product details
+2025-07-09 11:57:51 [main] INFO  com.tests.BaseTest - entering product details, adding to cart
+2025-07-09 11:58:19 [main] INFO  com.tests.BaseTest - going checkout, entering shipping details, goto payements
+2025-07-09 11:58:47 [main] INFO  com.tests.BaseTest - test method completed
+2025-07-09 11:58:47 [main] INFO  com.tests.BaseTest - == Finished TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==

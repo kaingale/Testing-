@@ -1,0 +1,11 @@
+2025-07-07 21:24:52 [main] INFO  com.tests.BaseTest - == Starting TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest ==
+2025-07-07 21:24:52 [main] INFO  com.tests.BaseTest - navigating to login page
+2025-07-07 21:25:08 [main] ERROR com.tests.BaseTest - Test failed due to an exception in catch block: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=137.0.7151.122)
+Build info: version: '4.33.0', revision: '2c6aaad03a'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ab3248cd316b2db55b8cc5c9414812cc, findElement {using=xpath, value=//div[@class='panel header']//a[contains(text(),'Sign In')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kaingale\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62668}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62668/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ab3248cd316b2db55b8cc5c9414812cc
