@@ -87,11 +87,11 @@ public class ProductDetailsPage extends BasePage {
 	}
 
 	public void chooseColorForProduct(String givenColor) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(driver -> {
-		    List<WebElement> overlays = driver.findElements(By.cssSelector("div.modals-overlay"));
-		    return overlays.isEmpty() || overlays.stream().allMatch(e -> !e.isDisplayed());
-		});
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		wait.until(driver -> {
+//		    List<WebElement> overlays = driver.findElements(By.cssSelector("div.modals-overlay"));
+//		    return overlays.isEmpty() || overlays.stream().allMatch(e -> !e.isDisplayed());
+//		});
 		waitForInVisiblityOfLocator(By.className("loading-mask"));
 		for(WebElement colorEle : colorList) {
 			scrollIntoViewElement(colorEle);
