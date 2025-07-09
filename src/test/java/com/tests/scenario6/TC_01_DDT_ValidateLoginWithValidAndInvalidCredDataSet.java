@@ -20,6 +20,7 @@ import com.pageObjects.HomePage;
 import com.pageObjects.LoginPage;
 import com.tests.BaseTest;
 import com.tests.WebDriverOptionsSetup;
+import com.utilities.ActionLogger;
 
 public class TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet extends BaseTest {
 	
@@ -68,19 +69,19 @@ public class TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet extends BaseT
 	public void verifyLoginDDT(String status, String email, String password) {
 		logger.info("== Starting TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet ==");
 		try {
+			ActionLogger actionLogger = actionLoggerCreationHelper();
 			//navigate to landing page and click on sign in link
 			logger.info("navigating to login page");
-			homePage = new HomePage(driver);
+			HomePage homePage = new HomePage(driver, actionLogger);
 			homePage.clickOnSignInLnk();
 			
 			//on login page fill all the details like email, pwd and click on sign in btn
 			logger.info("entering all the sign in details and click on sign in");
-			loginPage = new LoginPage(driver);
+			LoginPage loginPage = new LoginPage(driver, actionLogger);
 			loginPage.enterEmail(email);
 			loginPage.enterPassword(password);
-			Thread.sleep(2000);
 			loginPage.clickOnSignInBtn();
-			Thread.sleep(2000);
+
 		
 			//validate welcome user text msg and logout
 			logger.info("validating DDT datasets");
@@ -93,7 +94,6 @@ public class TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet extends BaseT
 			}
 			if (status.equalsIgnoreCase("Invalid")) {
 				logger.info("validating DDT email: {}", email);
-				Thread.sleep(2000);
 				Assert.assertTrue(loginPage.isSignInErrorMsgDisplayed(),"Test failed! no error msg displayed..");
 				Thread.sleep(6000);
 			}
@@ -116,7 +116,7 @@ public class TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet extends BaseT
 	@DataProvider(name = "credentialData")
 	public Object[][] getCreds(){
 		return new Object[][] {
-		{"Valid", "abc1@myorg.com", "Abc@1234"},
+		{"Valid", "abc3@myorg.com", "Abc@1234"},
 		{"Invalid", "mno@myorg.com", "Abcxyz@123"},
 		{"Invalid", "abc1@myorg.com", "Abcasfds@133eq"},
 		{"Valid", "roni_cost@example.com", "roni_cost3@example.com"},

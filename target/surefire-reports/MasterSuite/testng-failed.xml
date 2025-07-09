@@ -16,6 +16,20 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest -->
+      <class name="com.tests.scenario2.TC_02_LoginFunc_LoginUsingInValidCredsTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyLoginUsingInValidCreds"/>
+        </methods>
+      </class> <!-- com.tests.scenario2.TC_02_LoginFunc_LoginUsingInValidCredsTest -->
+      <class name="com.tests.scenario11.TC_01_AccUpdateFunc_ValidateAccountDetailsUpdationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyAccUpdateFunctionality"/>
+        </methods>
+      </class> <!-- com.tests.scenario11.TC_01_AccUpdateFunc_ValidateAccountDetailsUpdationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [MasterSuite] -->

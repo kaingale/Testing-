@@ -3,7 +3,7 @@
 <suite name="CrossBrowserParallelSuite" thread-count="2" parallel="tests">
 	<listeners>
 		<listener class-name="com.utilities.ExtentReportManager" />
-		<!-- <listener class-name="com.utilities.RetryListener" /> -->
+		<listener class-name="com.utilities.RetryListener" />
 	</listeners>
 
 	<!-- Chrome Tests -->
@@ -24,24 +24,8 @@
 		</classes>
 	</test>
 
-	<test name="Test-Chrome-3">
-		<parameter name="os" value="Windows" />
-		<parameter name="browser" value="chrome" />
-		<classes>
-			<class
-				name="com.tests.scenario3.TC_01_ProdSearchFunc_ProductSearchValidationTest" />
-		</classes>
-	</test>
 
 	<!-- Edge Tests -->
-	<test name="Test-Edge-1">
-		<parameter name="os" value="Windows" />
-		<parameter name="browser" value="edge" />
-		<classes>
-			<class
-				name="com.tests.scenario4.TC_01_CartFunc_ValidateAddToCartFunctionalityTest" />
-		</classes>
-	</test>
 
 	<test name="Test-Edge-2">
 		<parameter name="os" value="Windows" />

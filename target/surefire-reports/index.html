@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,8 +38,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-MasterSuite" class="navigator-link">
-              <span class="suite-name border-passed">MasterSuite</span>
+            <a href="#" panel-name="suite-DDtSuite" class="navigator-link">
+              <span class="suite-name border-failed">DDtSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,37 +49,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-MasterSuite" class="navigator-link ">
-                    <span>C:\Users\kaingale\Desktop\Assignments\master.xml</span>
+                  <a href="#" panel-name="test-xml-DDtSuite" class="navigator-link ">
+                    <span>C:\Users\kaingale\Desktop\Assignments\ddt-runner.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-MasterSuite" class="navigator-link ">
+                  <a href="#" panel-name="testlist-DDtSuite" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-MasterSuite" class="navigator-link ">
+                  <a href="#" panel-name="group-DDtSuite" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-MasterSuite" class="navigator-link ">
+                  <a href="#" panel-name="times-DDtSuite" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-MasterSuite" class="navigator-link ">
+                  <a href="#" panel-name="reporter-DDtSuite" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-MasterSuite" class="navigator-link ">
+                  <a href="#" panel-name="ignored-methods-DDtSuite" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-MasterSuite" class="navigator-link ">
+                  <a href="#" panel-name="chronological-DDtSuite" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -92,21 +92,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-DDtSuite" class="hide-methods failed suite-DDtSuite"> (hide)</a> <!-- hide-methods failed suite-DDtSuite -->
+                      <a href="#" panel-name="suite-DDtSuite" class="show-methods failed suite-DDtSuite"> (show)</a> <!-- show-methods failed suite-DDtSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-DDtSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DDtSuite" title="com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet" class="method navigator-link" hash-for-method="verifyLoginDDT(Invalid, mno@myorg.com, Abc@1234)">verifyLoginDDT(Invalid, mno@myorg.com, Abc@1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-DDtSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-MasterSuite" class="hide-methods passed suite-MasterSuite"> (hide)</a> <!-- hide-methods passed suite-MasterSuite -->
-                      <a href="#" panel-name="suite-MasterSuite" class="show-methods passed suite-MasterSuite"> (show)</a> <!-- show-methods passed suite-MasterSuite -->
+                      <a href="#" panel-name="suite-DDtSuite" class="hide-methods passed suite-DDtSuite"> (hide)</a> <!-- hide-methods passed suite-DDtSuite -->
+                      <a href="#" panel-name="suite-DDtSuite" class="show-methods passed suite-DDtSuite"> (show)</a> <!-- show-methods passed suite-DDtSuite -->
                     </span>
-                    <div class="method-list-content passed suite-MasterSuite">
+                    <div class="method-list-content passed suite-DDtSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-MasterSuite" title="com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest" class="method navigator-link" hash-for-method="verifyCheckoutFunctionlity">verifyCheckoutFunctionlity</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-DDtSuite" title="com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet" class="method navigator-link" hash-for-method="verifyLoginDDT(Invalid, mno@myorg.com, Abcxyz@123)">verifyLoginDDT(Invalid, mno@myorg.com, Abcxyz@123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-MasterSuite -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DDtSuite" title="com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet" class="method navigator-link" hash-for-method="verifyLoginDDT(Valid, roni_cost@example.com, roni_cost3@example.com)">verifyLoginDDT(Valid, roni_cost@example.com, roni_cost3@example.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DDtSuite" title="com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet" class="method navigator-link" hash-for-method="verifyLoginDDT(Invalid, abc1@myorg.com, Abcasfds@133eq)">verifyLoginDDT(Invalid, abc1@myorg.com, Abcasfds@133eq)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-DDtSuite" title="com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet" class="method navigator-link" hash-for-method="verifyLoginDDT(Valid, abc3@myorg.com, Abc@1234)">verifyLoginDDT(Valid, abc3@myorg.com, Abc@1234)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-DDtSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,32 +146,120 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-MasterSuite" class="panel MasterSuite">
-          <div class="suite-MasterSuite-class-passed">
+        <div panel-name="suite-DDtSuite" class="panel DDtSuite">
+          <div class="suite-DDtSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyCheckoutFunctionlity">
-                  </a> <!-- verifyCheckoutFunctionlity -->
-                  <span class="method-name">verifyCheckoutFunctionlity</span>
+                  <a name="verifyLoginDDT(Invalid, mno@myorg.com, Abc@1234)">
+                  </a> <!-- verifyLoginDDT(Invalid, mno@myorg.com, Abc@1234) -->
+                  <span class="method-name">verifyLoginDDT</span>
+                  <span class="parameters">(Invalid,mno@myorg.com,Abc@1234)</span>
+                  <div class="stack-trace">java.lang.RuntimeException: Test execution failed!
+	at com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet.verifyLoginDDT(TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet.java:110)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: AjaxElementLocator &apos;By.xpath: //div[contains(text(),&apos;The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.&apos;)]&apos; (tried for 20 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.pageObjects.BasePage.waitForVisibility(BasePage.java:59)
+	at com.pageObjects.LoginPage.isSignInErrorMsgDisplayed(LoginPage.java:59)
+	at com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet.verifyLoginDDT(TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet.java:97)
+	... 30 more
+Caused by: org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:91)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy32.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 33 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(),&apos;The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.&apos;)]&quot;}
+  (Session info: chrome=137.0.7151.122)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.33.0&apos;, revision: &apos;2c6aaad03a&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c2adcdbbedef8a01792791425f788b06, findElement {value=//div[contains(text(),&apos;The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.&apos;)], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.122, chrome: {chromedriverVersion: 137.0.7151.119 (e0ac9d12dff..., userDataDir: C:\Users\kaingale\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65337}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65337/devtoo..., se:cdpVersion: 137.0.7151.122, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c2adcdbbedef8a01792791425f788b06
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:157)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:71)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:87)
+	... 39 more
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-MasterSuite-class-passed -->
-        </div> <!-- panel MasterSuite -->
-        <div panel-name="test-xml-MasterSuite" class="panel">
+          </div> <!-- suite-DDtSuite-class-failed -->
+          <div class="suite-DDtSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginDDT(Invalid, mno@myorg.com, Abcxyz@123)">
+                  </a> <!-- verifyLoginDDT(Invalid, mno@myorg.com, Abcxyz@123) -->
+                  <span class="method-name">verifyLoginDDT</span>
+                  <span class="parameters">(Invalid,mno@myorg.com,Abcxyz@123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginDDT(Valid, roni_cost@example.com, roni_cost3@example.com)">
+                  </a> <!-- verifyLoginDDT(Valid, roni_cost@example.com, roni_cost3@example.com) -->
+                  <span class="method-name">verifyLoginDDT</span>
+                  <span class="parameters">(Valid,roni_cost@example.com,roni_cost3@example.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginDDT(Invalid, abc1@myorg.com, Abcasfds@133eq)">
+                  </a> <!-- verifyLoginDDT(Invalid, abc1@myorg.com, Abcasfds@133eq) -->
+                  <span class="method-name">verifyLoginDDT</span>
+                  <span class="parameters">(Invalid,abc1@myorg.com,Abcasfds@133eq)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginDDT(Valid, abc3@myorg.com, Abc@1234)">
+                  </a> <!-- verifyLoginDDT(Valid, abc3@myorg.com, Abc@1234) -->
+                  <span class="method-name">verifyLoginDDT</span>
+                  <span class="parameters">(Valid,abc3@myorg.com,Abc@1234)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-DDtSuite-class-passed -->
+        </div> <!-- panel DDtSuite -->
+        <div panel-name="test-xml-DDtSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\kaingale\Desktop\Assignments\master.xml</span>
+            <span class="header-content">C:\Users\kaingale\Desktop\Assignments\ddt-runner.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; name=&quot;MasterSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; name=&quot;DDtSuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.utilities.ExtentReportManager&quot;/&gt;
     &lt;listener class-name=&quot;com.utilities.RetryListener&quot;/&gt;
@@ -151,16 +268,16 @@
     &lt;parameter name=&quot;os&quot; value=&quot;Windows&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest&quot;/&gt;
+      &lt;class name=&quot;com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
-&lt;/suite&gt; &lt;!-- MasterSuite --&gt;
+&lt;/suite&gt; &lt;!-- DDtSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-MasterSuite" class="panel">
+        <div panel-name="testlist-DDtSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for MasterSuite</span>
+            <span class="header-content">Tests for DDtSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
@@ -170,74 +287,148 @@
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-MasterSuite" class="panel">
+        <div panel-name="group-DDtSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for MasterSuite</span>
+            <span class="header-content">Groups for DDtSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-MasterSuite" class="panel">
+        <div panel-name="times-DDtSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for MasterSuite</span>
+            <span class="header-content">Times for DDtSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_MasterSuite');
-function tableData_MasterSuite() {
+suiteTableInitFunctions.push('tableData_DDtSuite');
+function tableData_DDtSuite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyCheckoutFunctionlity')
-data.setCell(0, 2, 'com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest')
-data.setCell(0, 3, 83038);
-window.suiteTableData['MasterSuite']= { tableData: data, tableDiv: 'times-div-MasterSuite'}
+data.setCell(0, 1, 'verifyLoginDDT')
+data.setCell(0, 2, 'com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet')
+data.setCell(0, 3, 50691);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyLoginDDT')
+data.setCell(1, 2, 'com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet')
+data.setCell(1, 3, 15337);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyLoginDDT')
+data.setCell(2, 2, 'com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet')
+data.setCell(2, 3, 14953);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyLoginDDT')
+data.setCell(3, 2, 'com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet')
+data.setCell(3, 3, 11969);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyLoginDDT')
+data.setCell(4, 2, 'com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet')
+data.setCell(4, 3, 11338);
+window.suiteTableData['DDtSuite']= { tableData: data, tableDiv: 'times-div-DDtSuite'}
 return data;
 }
               </script>
               <span class="suite-total-time">Total running time: 1 minutes</span>
-              <div id="times-div-MasterSuite">
-              </div> <!-- times-div-MasterSuite -->
+              <div id="times-div-DDtSuite">
+              </div> <!-- times-div-DDtSuite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-MasterSuite" class="panel">
+        <div panel-name="reporter-DDtSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for MasterSuite</span>
+            <span class="header-content">Reporter output for DDtSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-MasterSuite" class="panel">
+        <div panel-name="ignored-methods-DDtSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-MasterSuite" class="panel">
+        <div panel-name="chronological-DDtSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.tests.scenario6.TC_01_DDT_ValidateLoginWithValidAndInvalidCredDataSet</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp(Windows, chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpMethod(Windows, chrome)</span>
+                <span class="method-start">11741 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyCheckoutFunctionlity</span>
-                <span class="method-start">11222 ms</span>
+                <span class="method-name">verifyLoginDDT(Valid, abc3@myorg.com, Abc@1234)</span>
+                <span class="method-start">11743 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownMethod</span>
+                <span class="method-start">27085 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpMethod(Windows, chrome)</span>
+                <span class="method-start">28816 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginDDT(Invalid, mno@myorg.com, Abcxyz@123)</span>
+                <span class="method-start">36871 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownMethod</span>
+                <span class="method-start">48209 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpMethod(Windows, chrome)</span>
+                <span class="method-start">48416 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginDDT(Invalid, abc1@myorg.com, Abcasfds@133eq)</span>
+                <span class="method-start">59767 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownMethod</span>
+                <span class="method-start">71736 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpMethod(Windows, chrome)</span>
+                <span class="method-start">71913 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyLoginDDT(Valid, roni_cost@example.com, roni_cost3@example.com)</span>
+                <span class="method-start">80587 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownMethod</span>
+                <span class="method-start">95542 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUpMethod(Windows, chrome)</span>
+                <span class="method-start">95752 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyLoginDDT(Invalid, mno@myorg.com, Abc@1234)</span>
+                <span class="method-start">103830 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDownMethod</span>
+                <span class="method-start">154720 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">94260 ms</span>
+                <span class="method-start">154857 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

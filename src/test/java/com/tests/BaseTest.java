@@ -74,7 +74,7 @@ public class BaseTest {
 				
 				switch(browser.trim().toLowerCase()) {
 					case "chrome":
-						WebDriverManager.chromedriver().clearDriverCache();
+//						WebDriverManager.chromedriver().clearDriverCache();
 						WebDriverManager.chromedriver().setup();
 						driver = new ChromeDriver(optionSetup.initChromeOptions());
 						break;

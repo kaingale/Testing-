@@ -3,18 +3,27 @@
 <suite thread-count="2" name="Failed suite [MasterSuite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.utilities.ExtentReportManager"/>
+    <listener class-name="com.utilities.RetryListener"/>
   </listeners>
   <test thread-count="2" name="Test(failed)">
+    <parameter name="headless" value="true"/>
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest">
+      <class name="com.tests.scenario2.TC_02_LoginFunc_LoginUsingInValidCredsTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyCheckoutFunctionlity"/>
           <include name="setUp"/>
+          <include name="verifyLoginUsingInValidCreds"/>
         </methods>
-      </class> <!-- com.tests.scenario5.TC_01_ChkOutFunc_ValidateCheckoutFunctionalityTest -->
+      </class> <!-- com.tests.scenario2.TC_02_LoginFunc_LoginUsingInValidCredsTest -->
+      <class name="com.tests.scenario3.TC_01_ProdSearchFunc_ProductSearchValidationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="verifyProductSearchFunctionalityTest"/>
+        </methods>
+      </class> <!-- com.tests.scenario3.TC_01_ProdSearchFunc_ProductSearchValidationTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [MasterSuite] -->
