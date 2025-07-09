@@ -1,11 +1,13 @@
 package com.pageObjects;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.utilities.ActionLogger;
 import com.utilities.ScenarioContextForSavingDynamicValues;
@@ -85,7 +87,11 @@ public class ProductDetailsPage extends BasePage {
 	}
 
 	public void chooseColorForProduct(String givenColor) {
-//		waitForInVisiblityOfLocator(By.cssSelector("div.modals-overlay"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(driver -> {
+		    List<WebElement> overlays = driver.findElements(By.cssSelector("div.modals-overlay"));
+		    return overlays.isEmpty() || overlays.stream().allMatch(e -> !e.isDisplayed());
+		});
 		waitForInVisiblityOfLocator(By.className("loading-mask"));
 		for(WebElement colorEle : colorList) {
 			scrollIntoViewElement(colorEle);
