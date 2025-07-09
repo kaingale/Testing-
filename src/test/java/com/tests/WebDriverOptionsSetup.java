@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,8 +33,10 @@ public class WebDriverOptionsSetup {
             options.addArguments("--disable-dev-shm-usage");
         }
         try {
-            String tempDir = java.nio.file.Files.createTempDirectory("chrome-user-data").toString();
-            options.addArguments("--user-data-dir=" + tempDir);
+        	Path tempDir = Files.createTempDirectory("chrome-user-data");
+            String userDataDir = tempDir.toAbsolutePath().toString();
+            options.addArguments("--user-data-dir=" + userDataDir);
+            System.out.println("Using user data dir: " + userDataDir);
         } catch (IOException e) {
             System.out.println("Failed to create temp user data dir: " + e.getMessage());
         }
